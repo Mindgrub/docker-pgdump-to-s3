@@ -2,14 +2,14 @@
 
 An Alpine-based Docker image for producing a file with `pg_dump` and uploading it to Amazon S3.
 
-There are tags for Alpine 3.20, 3.19, 3.18, and 3.17. This image is available on both the `linux/amd64` and `linux/arm64` platforms.
+There are tags for Alpine 3.21, 3.20, 3.19, and 3.18. This image is available on both the `linux/amd64` and `linux/arm64` platforms.
 
 ```bash
 # The "latest" tag will always point to the most recent version of Alpine.
 # Assuming 3.20.2 is most recent, these three commands all pull the same image.
 docker pull @mindgrub/pgdump-to-s3:latest
-docker pull @mindgrub/pgdump-to-s3:1-alpine-3.20
-docker pull @mindgrub/pgdump-to-s3:1-alpine-3.20.2
+docker pull @mindgrub/pgdump-to-s3:1-alpine-3.21
+docker pull @mindgrub/pgdump-to-s3:1-alpine-3.21.3
 
 # Pull other versions or architectures.
 docker pull --platform linux/arm64 @mindgrub/pgdump-to-s3:1-alpine-3.18
@@ -18,7 +18,7 @@ docker pull --platform linux/arm64 @mindgrub/pgdump-to-s3:1-alpine-3.18
 ## Environment Variables
 
 - `DB_HOST` – Required. The hostname to which `pg_dump` will connect.
-- `DB_PORT` – Optional. The TCP port to which `pg_dump` will connect (Default: "3306").
+- `DB_PORT` – Optional. The TCP port to which `pg_dump` will connect (Default: "5432").
 - `DB_NAME` – Required. The name of the database to dump.
 - `DB_USER` – Required. The username to use to connect.
 - `PGPASSWORD` – Required. The password to use to connect.

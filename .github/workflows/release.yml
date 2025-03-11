@@ -20,10 +20,10 @@ jobs:
           - "linux/amd64"
           - "linux/arm64"
         alpine_version:
+          - "3.21"
           - "3.20"
           - "3.19"
           - "3.18"
-          - "3.17"
 
     steps:
       - name: Prepare
@@ -86,10 +86,10 @@ jobs:
       fail-fast: false
       matrix:
         alpine_version:
+          - "3.21"
           - "3.20"
           - "3.19"
           - "3.18"
-          - "3.17"
 
     steps:
       - name: Prepare
@@ -115,7 +115,7 @@ jobs:
         with:
           images: ${{ env.REGISTRY_IMAGE }}
           tags: |
-            type=raw,value=latest,enabled=${{ matrix.alpine_version == '3.20' }}
+            type=raw,value=latest,enabled=${{ matrix.alpine_version == '3.21' }}
             type=raw,value=${{ env.IMAGE_VERSION }}-alpine-${{ matrix.alpine_version }}
             type=raw,value=${{ env.IMAGE_VERSION }}-alpine-${{ env.ALPINE_FULL_VERSION }}
 
