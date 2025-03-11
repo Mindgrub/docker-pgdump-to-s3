@@ -115,7 +115,7 @@ jobs:
         with:
           images: ${{ env.REGISTRY_IMAGE }}
           tags: |
-            type=raw,value=latest,enabled=${{ matrix.alpine_version == '3.21' }}
+            type=raw,value=latest,enable=${{ matrix.alpine_version == '3.21' }}
             type=raw,value=${{ env.IMAGE_VERSION }}-alpine-${{ matrix.alpine_version }}
             type=raw,value=${{ env.IMAGE_VERSION }}-alpine-${{ env.ALPINE_FULL_VERSION }}
 
