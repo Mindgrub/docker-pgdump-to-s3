@@ -1,5 +1,7 @@
 # docker-pgdump-to-s3
 
+[![Docker Pulls](https://img.shields.io/docker/pulls/mindgrub/pgdump-to-s3?logo=docker&logoColor=white)](https://hub.docker.com/r/mindgrub/pgdump-to-s3) [![Release Status](https://github.com/Mindgrub/docker-pgdump-to-s3/actions/workflows/release.yml/badge.svg)](https://github.com/Mindgrub/docker-pgdump-to-s3/actions/workflows/release.yml)
+
 An Alpine-based Docker image for producing a file with `pg_dump` and uploading it to Amazon S3.
 
 There are tags for Alpine 3.21, 3.20, 3.19, and 3.18. This image is available on both the `linux/amd64` and `linux/arm64` platforms.
